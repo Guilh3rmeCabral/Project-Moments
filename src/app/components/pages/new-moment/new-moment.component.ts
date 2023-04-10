@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./new-moment.component.scss']
 })
 export class NewMomentComponent {
+  btnText = 'Share!'
 
 }
