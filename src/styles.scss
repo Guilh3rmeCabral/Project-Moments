@@ -26,6 +26,7 @@ form {
     display: flex;
     flex-direction: column;
     margin-bottom: 1em;
+    
 }
 
 .form-group label {
@@ -49,10 +50,26 @@ input[type="submit"] {
     font-size: 1.1em;
     cursor: pointer;
     transition: 0.4s;
+    margin-bottom: 1.5em;
 }
 
 input[type="submit"]:hover {
     color: #dec129;
     border-color: #dec129;
     background-color: transparent;
+}
+
+/*Validation error*/
+
+.validation-error p {
+    background-color: #ffeaec;
+    box-shadow: #777;
+    color: #DC3545;
+    margin-top: 0.4em;
+    border-left: 3px solid #dc3545;
+    padding-left: 0.2em;
+}
+
+.validation-error-bottom p {
+    margin-bottom: 0.3em;
 }
