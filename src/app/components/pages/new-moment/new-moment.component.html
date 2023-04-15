@@ -1,2 +1,5 @@
 <h2>Share your <span>moment!</span></h2>
-<app-moment-form [btnText]="btnText"></app-moment-form>
+<app-moment-form 
+    [btnText]="btnText"
+    (onSubmit)="creatHandler($event)"    
+    ></app-moment-form>
