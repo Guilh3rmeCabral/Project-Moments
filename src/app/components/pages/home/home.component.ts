@@ -20,13 +20,12 @@ export class HomeComponent {
 
   ngOnInit(): void {
     this.momentService.getMoments().subscribe((items)=> {
-      const data = items.data
+      const data = items.data;
       data.map((item) => {
         item.created_at = new Date(item.created_at!).toLocaleDateString('pt-BR');
       });
-
-      this.allMoments = data;
-      this.moments = data;
+      this.allMoments = items.data;
+      this.moments = items.data;
     });
   }
 }
