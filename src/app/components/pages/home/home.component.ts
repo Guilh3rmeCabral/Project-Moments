@@ -13,6 +13,9 @@ export class HomeComponent {
   moments: Moment[] = [];
   baseApiUrl = environment.baseApiUrl;
 
+  faSearch = faSearch;
+  searchTerm: string = '';
+
   constructor (
     private momentService: MomentService,
 
@@ -26,6 +29,15 @@ export class HomeComponent {
       });
       this.allMoments = items.data;
       this.moments = items.data;
+    });
+  }
+
+  search(event: Event) {
+    const target = event.target as HTMLInputElement;
+    const value = target.value.toLowerCase();
+
+    this.moments = this.allMoments.filter(moment => {
+      return moment.title?.toLowerCase().includes(value);
     });
   }
 }
