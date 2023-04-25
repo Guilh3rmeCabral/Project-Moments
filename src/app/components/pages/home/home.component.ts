@@ -33,11 +33,11 @@ export class HomeComponent {
   }
 
   search(event: Event) {
-    const target = event.target as HTMLInputElement;
-    const value = target.value.toLowerCase();
+    const data = event.target as HTMLInputElement;
+    const valueData = data.value.toLowerCase();
 
     this.moments = this.allMoments.filter(moment => {
-      return moment.title?.toLowerCase().includes(value);
+      return moment.title?.toLowerCase().includes(valueData);
     });
   }
 }
