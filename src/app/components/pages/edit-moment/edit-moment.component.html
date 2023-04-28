@@ -1,0 +1,14 @@
+<div class="" *ngIf="moment">
+    <h2>
+        Moment editing 
+        <span>
+            {{moment.title}}
+        </span>
+        !
+    </h2>
+    <app-moment-form
+        [momentData]="moment"
+        [btnText]="btnText"
+    >
+    </app-moment-form>
+</div>
